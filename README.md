@@ -22,3 +22,7 @@ References
 19. Webb-Site. http://webb-site.com/.
 20. Google Trends. https://www.google.com/trends/.
 21. GitHub Pages. https://pages.github.com/.
+
+Demo Sources
+1. Radar Chart. https://gist.github.com/nbremer/21746a9668ffdf6d8242#file-radarchart-js
+2. Circle Packing. http://bl.ocks.org/mbostock/4063530
