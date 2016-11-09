@@ -26,3 +26,4 @@ References
 Demo Sources
 1. Radar Chart. https://gist.github.com/nbremer/21746a9668ffdf6d8242#file-radarchart-js
 2. Circle Packing. http://bl.ocks.org/mbostock/4063530
+3. d3-hierarchy. https://github.com/d3/d3-hierarchy
