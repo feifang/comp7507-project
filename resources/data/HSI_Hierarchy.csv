@@ -1,99 +1,98 @@
-name,industry,region,marketcap2015,marketcap2016
-World,,,,
-HK,,World,,
-Unknown,,World,,
-UK,,World,,
-Macau,,World,,
-Mainland,,World,,
-CKH Holdings,Commerce & Industry,HK,169,264
-CLP Holdings,Utilities,HK,463,261
-HK & China Gas,Utilities,HK,324,298
-Wharf Holdings,Properties,HK,358,371
-HSBC Holdings,Finance,UK,209,511
-Power Assets,Utilities,HK,245,482
-HK Land Hldgs,Commerce & Industry,Unknown,258,215
-PCCW,Commerce & Industry,HK,429,133
-CWHKT,Commerce & Industry,HK,229,444
-Hang Lung Group,Properties,HK,432,542
-Hang Seng Bank,Finance,HK,107,546
-Henderson Land,Properties,HK,497,227
-Hutchison,Properties,HK,483,168
-Hysan Dev,Properties,HK,135,154
-Jar Matheson,Commerce & Industry,Unknown,327,374
-SHK Ppt,Properties,HK,414,434
-New World Dev,Properties,HK,92,191
-Oriental Press,Commerce & Industry,HK,182,290
-Swire Pacific A,Commerce & Industry,UK,67,361
-Wheelock,Properties,HK,195,421
-Bank of E Asia,Finance,HK,206,105
-Galaxy Ent,Commerce & Industry,HK,144,111
-Great Eagle Hldgs,Properties,HK,191,279
-HK Aircraft,Commerce & Industry,HK,180,155
-HK & S Hotels,Commerce & Industry,HK,107,467
-Hopewell Hldgs,Properties,HK,352,399
-Kln Motor Bus,Commerce & Industry,HK,276,514
-MTR Corporation,Commerce & Industry,HK,116,250
-Shangri-La Asia,Commerce & Industry,HK,107,458
-Miramar,Commerce & Industry,Unknown,487,514
-Sino Land,Properties,HK,305,341
-Henderson Inv,Properties,HK,405,163
-Winsor Ind,Commerce & Industry,Unknown,354,444
-Hang Lung Ppt,Properties,HK,169,299
-Kunlun Energy,Commerce & Industry,Mainland,316,539
-First Pacific,Commerce & Industry,HK,225,313
-China Mer Port,Commerce & Industry,Mainland,267,372
-Want Want China,Commerce & Industry,Mainland,123,501
-Johnson Elec H,Commerce & Industry,HK,311,261
-Lai Sun Int'l,Commerce & Industry,Unknown,70,453
-Denway Motors,Commerce & Industry,Unknown,345,431
-Jar Strategic,Commerce & Industry,Unknown,178,469
-Dao Heng Bank,Finance,HK,408,177
-Shun Tak Hldgs,Commerce & Industry,HK,388,478
-CITIC,Commerce & Industry,Mainland,285,376
-Guangdong Inv,Commerce & Industry,Mainland,439,353
-China Res Beer,Commerce & Industry,Mainland,179,446
-Cathay Pac Air,Commerce & Industry,HK,337,186
-SmarTone Telecom,Commerce & Industry,HK,364,313
-Tingyi,Commerce & Industry,Mainland,117,137
-Esprit Holdings,Commerce & Industry,HK,195,138
-Dairy Farm Int'l,Commerce & Industry,Unknown,464,129
-Shanghai Ind Hldgs,Properties,Mainland,483,321
-Sinopec Corp,Commerce & Industry,Mainland,232,121
-HKEx,Finance,HK,254,340
-Mandarin Oriental,Commerce & Industry,Unknown,248,309
-Li & Fung,Commerce & Industry,HK,103,440
-TVB,Commerce & Industry,HK,458,224
-Yue Yuen Ind,Commerce & Industry,HK,430,113
-SCMP (Hldgs),Commerce & Industry,HK,102,250
-China Overseas,Properties,Mainland,143,467
-Tencent,Commerce & Industry,Mainland,497,157
-China Unicom,Commerce & Industry,Mainland,431,255
-Link REIT,Properties,HK,345,109
-China Res Power,Utilities,Mainland,82,391
-PetroChina,Commerce & Industry,Mainland,344,264
-CNOOC,Commerce & Industry,Mainland,323,229
-China Netcom,Commerce & Industry,Mainland,453,190
-CCB,Finance,Mainland,247,306
-China Mobile,Commerce & Industry,Mainland,465,374
-Lenovo Group,Commerce & Industry,Mainland,250,217
-CKI Holdings,Utilities,HK,154,181
-Hengan Int'l,Commerce & Industry,HK,137,106
-China Shenhua,Commerce & Industry,Mainland,449,114
-China Res Land,Properties,HK,208,170
-CK Property,Properties,HK,447,390
-PCCW,Commerce & Industry,HK,350,455
-COSCO Pacific,Commerce & Industry,Mainland,439,508
-AIA,Finance,HK,174,163
-ICBC,Finance,Mainland,409,195
-Belle Int'l,Commerce & Industry,Mainland,117,168
-China Coal,Commerce & Industry,Mainland,328,242
-Sands China Ltd,Commerce & Industry,Macau,114,119
-AAC Tech,Commerce & Industry,Mainland,453,172
-FIH,Commerce & Industry,HK,99,296
-Ping An,Finance,Mainland,57,454
-Mengniu Dairy,Commerce & Industry,Mainland,174,505
-BOC Hong Kong,Finance,Mainland,472,189
-CHALCO,Commerce & Industry,Mainland,444,337
-China Life,Finance,Mainland,291,217
-Bankcomm,Finance,Mainland,434,431
-Bank of China,Finance,Mainland,140,538
+name,industry,region,marketcap201410,marketcap201512,marketcap201610
+World,,,,,
+HK,,World,,,
+Unknown,,World,,,
+UK,,World,,,
+Macau,,World,,,
+Mainland,,World,,,
+CKH Holdings,Commerce & Industry,HK,169,264,506
+CLP Holdings,Utilities,HK,463,261,269
+HK & China Gas,Utilities,HK,324,298,759
+Wharf Holdings,Properties,HK,358,371,632
+HSBC Holdings,Finance,UK,209,511,375
+Power Assets,Utilities,HK,245,482,407
+HK Land Hldgs,Commerce & Industry,Unknown,258,215,717
+PCCW,Commerce & Industry,HK,429,,495
+CWHKT,Commerce & Industry,HK,229,,585
+Hang Lung Group,Properties,HK,432,542,467
+Hang Seng Bank,Finance,HK,107,546,339
+Henderson Land,Properties,HK,497,227,551
+Hutchison,Properties,HK,483,168,552
+Hysan Dev,Properties,HK,135,154,571
+Jar Matheson,Commerce & Industry,Unknown,327,374,647
+SHK Ppt,Properties,HK,414,434,264
+New World Dev,Properties,HK,92,191,762
+Oriental Press,Commerce & Industry,HK,182,290,274
+Swire Pacific A,Commerce & Industry,UK,67,361,371
+Wheelock,Properties,HK,195,421,333
+Bank of E Asia,Finance,HK,206,105,559
+Galaxy Ent,Commerce & Industry,HK,144,111,449
+Great Eagle Hldgs,Properties,HK,191,279,273
+HK Aircraft,Commerce & Industry,HK,180,155,416
+HK & S Hotels,Commerce & Industry,HK,107,467,403
+Hopewell Hldgs,Properties,HK,352,399,463
+Kln Motor Bus,Commerce & Industry,HK,276,514,749
+MTR Corporation,Commerce & Industry,HK,116,250,432
+Shangri-La Asia,Commerce & Industry,HK,107,458,294
+Miramar,Commerce & Industry,Unknown,487,514,415
+Sino Land,Properties,HK,305,341,668
+Henderson Inv,Properties,HK,405,163,375
+Winsor Ind,Commerce & Industry,Unknown,354,444,544
+Hang Lung Ppt,Properties,HK,169,299,330
+Kunlun Energy,Commerce & Industry,Mainland,316,539,681
+First Pacific,Commerce & Industry,HK,225,313,436
+China Mer Port,Commerce & Industry,Mainland,267,372,424
+Want Want China,Commerce & Industry,Mainland,123,501,638
+Johnson Elec H,Commerce & Industry,HK,311,261,359
+Lai Sun Int'l,Commerce & Industry,Unknown,70,453,688
+Denway Motors,Commerce & Industry,Unknown,345,431,608
+Jar Strategic,Commerce & Industry,Unknown,178,469,742
+Dao Heng Bank,Finance,HK,408,177,564
+Shun Tak Hldgs,Commerce & Industry,HK,388,478,422
+CITIC,Commerce & Industry,Mainland,285,376,745
+Guangdong Inv,Commerce & Industry,Mainland,439,353,727
+China Res Beer,Commerce & Industry,Mainland,179,446,570
+Cathay Pac Air,Commerce & Industry,HK,337,186,456
+SmarTone Telecom,Commerce & Industry,HK,364,313,334
+Tingyi,Commerce & Industry,Mainland,117,137,744
+Esprit Holdings,Commerce & Industry,HK,195,138,748
+Dairy Farm Int'l,Commerce & Industry,Unknown,464,129,419
+Shanghai Ind Hldgs,Properties,Mainland,483,321,577
+Sinopec Corp,Commerce & Industry,Mainland,232,121,395
+HKEx,Finance,HK,254,340,480
+Mandarin Oriental,Commerce & Industry,Unknown,248,309,734
+Li & Fung,Commerce & Industry,HK,103,440,730
+TVB,Commerce & Industry,HK,458,224,573
+Yue Yuen Ind,Commerce & Industry,HK,430,113,484
+SCMP (Hldgs),Commerce & Industry,HK,102,250,367
+China Overseas,Properties,Mainland,143,467,734
+Tencent,Commerce & Industry,Mainland,497,157,331
+China Unicom,Commerce & Industry,Mainland,431,255,487
+Link REIT,Properties,HK,345,109,690
+China Res Power,Utilities,Mainland,82,391,546
+PetroChina,Commerce & Industry,Mainland,344,264,730
+CNOOC,Commerce & Industry,Mainland,323,229,633
+China Netcom,Commerce & Industry,Mainland,453,190,735
+CCB,Finance,Mainland,247,306,292
+China Mobile,Commerce & Industry,Mainland,465,374,720
+Lenovo Group,Commerce & Industry,Mainland,250,217,564
+CKI Holdings,Utilities,HK,154,181,544
+Hengan Int'l,Commerce & Industry,HK,137,106,461
+China Shenhua,Commerce & Industry,Mainland,449,114,362
+China Res Land,Properties,HK,208,170,366
+CK Property,Properties,HK,447,390,748
+COSCO Pacific,Commerce & Industry,Mainland,439,508,483
+AIA,Finance,HK,174,163,689
+ICBC,Finance,Mainland,409,195,471
+Belle Int'l,Commerce & Industry,Mainland,117,168,276
+China Coal,Commerce & Industry,Mainland,328,242,376
+Sands China Ltd,Commerce & Industry,Macau,114,119,518
+AAC Tech,Commerce & Industry,Mainland,453,172,437
+FIH,Commerce & Industry,HK,99,296,440
+Ping An,Finance,Mainland,57,454,595
+Mengniu Dairy,Commerce & Industry,Mainland,174,505,435
+BOC Hong Kong,Finance,Mainland,472,189,645
+CHALCO,Commerce & Industry,Mainland,444,337,508
+China Life,Finance,Mainland,291,217,706
+Bankcomm,Finance,Mainland,434,431,749
+Bank of China,Finance,Mainland,140,538,538
