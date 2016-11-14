@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Skills sunburst</title>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/skill.css"/>
+  </head>
+  <body>
+    <div id="skills">
+      <div id="skillmap">
+        <div class="skills-wrapper">
+          <div class="skills-sunburst"></div>
+          <div class="skills-chart">
+            <div id="skills-chart-breadcrumb"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/skillsdata.js"></script>
+    <script type="text/javascript" src="js/skill.js"></script>
+    <script type="text/javascript">
+      // Hack to make this example display correctly in an iframe on bl.ocks.org
+      d3.select(self.frameElement).style("height", "700px");
+  </script> 
+  </body>
+</html>
