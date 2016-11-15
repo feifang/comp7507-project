@@ -9,7 +9,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
 		<!-- D3.js -->
-		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<script src="plugins/d3/d3.v4.min.js" charset="utf-8"></script>
 		
 		<style>
 			body {
@@ -66,7 +66,7 @@
 			//////////////////// Draw the Chart ////////////////////////// 
 			////////////////////////////////////////////////////////////// 
 
-			var color = d3.scale.ordinal()
+			var color = d3.scaleOrdinal()
 				.range(["#EDC951","#CC333F","#00A0B0"]);
 				
 			var radarChartOptions = {
@@ -76,7 +76,8 @@
 			  maxValue: 1,
 			  levels: 5,
 			  roundStrokes: true,
-			  color: color
+			  color: color,
+			  backgroundSign: -1
 			};
 			//Call function to draw the Radar chart
 			RadarChart(".radarChart", data, radarChartOptions);

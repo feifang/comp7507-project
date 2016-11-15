@@ -19,7 +19,8 @@ function RadarChart(id, data, options) {
 	 opacityCircles: 0.1, 	//The opacity of the circles of each blob
 	 strokeWidth: 2, 		//The width of the stroke around each blob
 	 roundStrokes: false,	//If true the area and stroke will follow a round path (cardinal-closed)
-	 color: d3.scale.category10()	//Color function
+	 color: d3.scaleOrdinal(d3.schemeCategory10),	//Color function
+	 backgroundSign: 0      // 1: positive, 0: neutral, -1: negative
 	};
 	
 	//Put all of the options into a variable called cfg
@@ -35,11 +36,11 @@ function RadarChart(id, data, options) {
 	var allAxis = (data[0].map(function(i, j){return i.axis})),	//Names of each axis
 		total = allAxis.length,					//The number of different axes
 		radius = Math.min(cfg.w/2, cfg.h/2), 	//Radius of the outermost circle
-		Format = d3.format('%'),			 	//Percentage formatting
-		angleSlice = Math.PI * 2 / total;		//The width in radians of each "slice"
-	
+                Format = d3.format('.00%'),                                //Percentage formatting
+                angleSlice = Math.PI * 2 / total;               //The width in radians of each "slice"
+		
 	//Scale for the radius
-	var rScale = d3.scale.linear()
+	var rScale = d3.scaleLinear()
 		.range([0, radius])
 		.domain([0, maxValue]);
 		
@@ -78,14 +79,26 @@ function RadarChart(id, data, options) {
 	var axisGrid = g.append("g").attr("class", "axisWrapper");
 	
 	//Draw the background circles
+        var backgroundColor = "#BAFCFC";
+        switch (cfg.backgroundSign) {
+            case 1:
+                backgroundColor = "#C0FCC0";
+                break;
+            case -1:
+                backgroundColor = "#FCC0C0";
+                break;
+            default:
+                break;
+        }
+
 	axisGrid.selectAll(".levels")
 	   .data(d3.range(1,(cfg.levels+1)).reverse())
 	   .enter()
 		.append("circle")
 		.attr("class", "gridCircle")
 		.attr("r", function(d, i){return radius/cfg.levels*d;})
-		.style("fill", "#CDCDCD")
-		.style("stroke", "#CDCDCD")
+		.style("fill", backgroundColor)
+		.style("stroke", backgroundColor)
 		.style("fill-opacity", cfg.opacityCircles)
 		.style("filter" , "url(#glow)");
 
@@ -124,7 +137,7 @@ function RadarChart(id, data, options) {
 	//Append the labels at each axis
 	axis.append("text")
 		.attr("class", "legend")
-		.style("font-size", "11px")
+		.style("font-size", "8.5px")
 		.attr("text-anchor", "middle")
 		.attr("dy", "0.35em")
 		.attr("x", function(d, i){ return rScale(maxValue * cfg.labelFactor) * Math.cos(angleSlice*i - Math.PI/2); })
