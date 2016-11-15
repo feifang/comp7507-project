@@ -18,7 +18,6 @@ function RadarChart(id, data, options) {
 	 dotRadius: 4, 			//The size of the colored circles of each blog
 	 opacityCircles: 0.1, 	//The opacity of the circles of each blob
 	 strokeWidth: 2, 		//The width of the stroke around each blob
-	 roundStrokes: false,	//If true the area and stroke will follow a round path (cardinal-closed)
 	 color: d3.scaleOrdinal(d3.schemeCategory10),	//Color function
 	 backgroundSign: 0      // 1: positive, 0: neutral, -1: negative
 	};
@@ -150,15 +149,10 @@ function RadarChart(id, data, options) {
 	/////////////////////////////////////////////////////////
 	
 	//The radial line function
-	var radarLine = d3.svg.line.radial()
-		.interpolate("linear-closed")
+	var radarLine = d3.radialLine()
 		.radius(function(d) { return rScale(d.value); })
 		.angle(function(d,i) {	return i*angleSlice; });
 		
-	if(cfg.roundStrokes) {
-		radarLine.interpolate("cardinal-closed");
-	}
-				
 	//Create a wrapper for the blobs	
 	var blobWrapper = g.selectAll(".radarWrapper")
 		.data(data)
