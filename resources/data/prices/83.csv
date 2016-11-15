@@ -1,4 +1,4 @@
-atDate,closing,adjClose,monthReturnSign,yearReturnSign
+atDate,close,adjClose,monthReturnSign,yearReturnSign
 1994-01-31,11.7,4.58906,0,0
 1994-02-28,9.5,3.72616,-1,0
 1994-03-31,8.35,3.2751,-1,0
