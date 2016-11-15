@@ -9,7 +9,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 
 		<!-- D3.js -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 		
 		<style>
 			body {
@@ -53,12 +53,13 @@
 
 			var data = [
 					  [//1
-						{axis:"operatingProfitMargin",value:0.87},
-						{axis:"netProfitMargin",value:1.79},
-						{axis:"payoutRatio",value:0.21},
-						{axis:"returnOnCapital",value:0.16},
-						{axis:"returnOnAssets",value:0.10},
-						{axis:"returnOnEquity",value:0.12}		
+						{axis:"returnOnAssets",value:0.100057118},
+						{axis:"returnOnEquity",value:0.121820575},
+						{axis:"freeCashFlowToAssets",value:0.000773619},
+						{axis:"freeCashFlowToEquity",value:0.000941889},
+						{axis:"operatingProfitMargin",value:0.873397228},
+						{axis:"netProfitMargin",value:1},
+						{axis:"payoutRatio",value:0.205036491}		
 					  ]
 					];
 			////////////////////////////////////////////////////////////// 
@@ -72,7 +73,7 @@
 			  w: width,
 			  h: height,
 			  margin: margin,
-			  maxValue: 2,
+			  maxValue: 1,
 			  levels: 5,
 			  roundStrokes: true,
 			  color: color
