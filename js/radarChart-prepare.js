@@ -13,14 +13,15 @@ var color = d3.scaleOrdinal()
 /////////////////// Data + Draw function ///////////////////// 
 ////////////////////////////////////////////////////////////// 
 
+// Removing payoutRatio - values too extreme
+
 var axes = [
   "returnOnAssets", 
   "returnOnEquity", 
   "freeCashFlowToAssets", 
   "freeCashFlowToEquity", 
-  "returnOnAssets",
-  "returnOnEquity",
-  "payoutRatio"
+  "operatingProfitMargin",
+  "netProfitMargin"
 ];
 
 var loadPriceFile = function(symbol) {
@@ -41,6 +42,16 @@ var loadFundamentalsFile = function(symbol) {
 
 var drawChart = function(symbol, period) {
   $.when(loadPriceFile(symbol), loadFundamentalsFile(symbol)).done(function(price, fundamentals) {
+    var options = {
+      w: width,
+      h: height,
+      margin: margin,
+      labelFactor: 1.2,
+      maxValue: 0.3,
+      levels: 6,
+      color: color,
+      backgroundSign: 0
+    };
     var priceMatch = _.filter(price, function(p) {
       return p.atDate === period;
     });
@@ -48,17 +59,9 @@ var drawChart = function(symbol, period) {
       return f.reportingDate === period;
     });
     var data = _.map(axes, function(x) {
-      return { axis: x, value: +fundamentalsMatch[0][x] };
+      return { axis: x, value: Math.min(+fundamentalsMatch[0][x], options.maxValue) };
     });
-    var options = {
-      w: width,
-      h: height,
-      margin: margin,
-      maxValue: 1,
-      levels: 5,
-      color: color,
-      backgroundSign: +priceMatch[0].monthReturnSign
-    };
+    options.backgroundSign = +priceMatch[0].monthReturnSign;
     RadarChart(".radarChart", [data], options);
   });
 };

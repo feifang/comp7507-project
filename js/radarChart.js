@@ -136,7 +136,7 @@ function RadarChart(id, data, options) {
 	//Append the labels at each axis
 	axis.append("text")
 		.attr("class", "legend")
-		.style("font-size", "8.5px")
+		.style("font-size", "12px")
 		.attr("text-anchor", "middle")
 		.attr("dy", "0.35em")
 		.attr("x", function(d, i){ return rScale(maxValue * cfg.labelFactor) * Math.cos(angleSlice*i - Math.PI/2); })
@@ -232,7 +232,8 @@ function RadarChart(id, data, options) {
 				.attr('y', newY)
 				.text(Format(d.value))
 				.transition().duration(200)
-				.style('opacity', 1);
+				.style('opacity', 1)
+				.style('font-size', '20px');
 		})
 		.on("mouseout", function(){
 			tooltip.transition().duration(200)
@@ -257,7 +258,7 @@ function RadarChart(id, data, options) {
 			word,
 			line = [],
 			lineNumber = 0,
-			lineHeight = 1.4, // ems
+			lineHeight = 1, // ems
 			y = text.attr("y"),
 			x = text.attr("x"),
 			dy = parseFloat(text.attr("dy")),
