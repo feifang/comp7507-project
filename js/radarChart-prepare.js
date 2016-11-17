@@ -24,22 +24,6 @@ var axes = [
   "netProfitMargin"
 ];
 
-var loadPriceFile = function(symbol) {
-  var deferred = $.Deferred();
-  d3.csv("resources/data/prices/" + symbol + ".csv", function(error, data) {
-    deferred.resolve(data);
-  });
-  return deferred;
-};
-
-var loadFundamentalsFile = function(symbol) {
-  var deferred = $.Deferred();
-  d3.csv("resources/data/fundamentals/" + symbol + ".csv", function(error, data) {
-    deferred.resolve(data);
-  });
-  return deferred;
-};
-
 var drawChart = function(symbol, period) {
   $.when(loadPriceFile(symbol), loadFundamentalsFile(symbol)).done(function(price, fundamentals) {
     var options = {

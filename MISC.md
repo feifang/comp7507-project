@@ -4,6 +4,9 @@
 * oclazyload
 * require
 
+# GitHub Pages
+* https://github.com/blog/1081-instantly-beautiful-project-pages
+
 # Basic Code Examples
 * http://bl.ocks.org/
 * Basic line drawing: http://bl.ocks.org/yonester/6472779

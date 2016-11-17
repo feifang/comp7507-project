@@ -24,7 +24,8 @@ References
 21. GitHub Pages. https://pages.github.com/.
 
 Demo Sources
-1. Radar Chart. https://gist.github.com/nbremer/21746a9668ffdf6d8242#file-radarchart-js
-2. Circle Packing. http://bl.ocks.org/mbostock/4063530
-3. d3-hierarchy. https://github.com/d3/d3-hierarchy
-4. Sunburst Chart. https://gist.github.com/wizicer/f662a0b04425fc0f7489
+
+1. Radar Chart. https://gist.github.com/nbremer/21746a9668ffdf6d8242#file-radarchart-js.
+2. Circle Packing. http://bl.ocks.org/mbostock/4063530.
+3. d3-hierarchy. https://github.com/d3/d3-hierarchy.
+4. Sunburst Chart. https://gist.github.com/wizicer/f662a0b04425fc0f7489.

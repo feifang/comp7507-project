@@ -263,6 +263,7 @@ var t = function(a, b) {
     .sort(null)
     .size([2 * Math.PI, rad])
     .children(function(a) {
+        console.log(a);
         return a.value instanceof Array ?
             (a._proficiency = a.value, d3.entries([a.value[a.value.length - 1]])) :
             (a._proficiency = u(a.value), isNaN(a.value) ? d3.entries(a.value) : null)
