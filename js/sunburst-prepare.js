@@ -1,4 +1,19 @@
 var periods = [
+  "201110",
+  "201111",
+  "201112",
+  "201201",
+  "201202",
+  "201203",
+  "201204",
+  "201205",
+  "201206",
+  "201207",
+  "201208",
+  "201209",
+  "201210",
+  "201211",
+  "201212",
   "201301",
   "201302",
   "201303",
@@ -82,8 +97,12 @@ var buildHierarchyWithPrices = function() {
               return _.includes(periods, row.atDate);
             });
             var priceData = _.map(filteredData, function(row) {
-              // Sunburst script does NOT accept decimals
-              return Math.floor(+row.close);
+              return Number(row.adjClose);
+            });
+            // Sunburst script does NOT accept decimals
+            var startValue = _.filter(priceData, function(x) { return !isNaN(x); })[0];
+            priceData = _.map(priceData, function(x) {
+              return Math.round(x / startValue * 100);
             });
             hierarchy.stocks[country][sector][name] = priceData;
             hierarchyWithPrices = hierarchy;

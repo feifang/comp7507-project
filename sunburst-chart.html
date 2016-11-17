@@ -31,10 +31,8 @@
     <script type="text/javascript" src="js/sunburst.js"></script>
     <script type="text/javascript">
       var coloralternative = 0;
-      var hierarchy = undefined;
-    
+
       $.when(buildHierarchyWithPrices()).done(function(data) {
-        hierarchy = data;
         drawChart(data);
       });
     </script>

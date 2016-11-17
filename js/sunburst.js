@@ -4,7 +4,7 @@ var drawChart = function(hierarchy) {
       return 0.0;
     });
 
-    var offset = 2000;
+    var offset = 2011.75;
     var months = _.map(periods, function(p) {
       return (Number(p.substr(0, 4)) - offset) * 12 + Number(p.substr(4, 2));
     });
@@ -121,7 +121,7 @@ var drawChart = function(hierarchy) {
     
     function k(a) {
         var c = ["#4CC3D9", "#FFC65D", "#7BC8A4", "#93648D", "#404040"],
-            d = [-.1, -.05, 0];
+            d = [-.2, -.1, 0];
         if (1 == a.depth) {
             var e = c[coloralternative % 5];
             return coloralternative++, e
@@ -149,7 +149,8 @@ var drawChart = function(hierarchy) {
                     return a.date
                 }));
                 k
-                    .domain([0, 100]), cpath
+                // Scaled by 10 times
+                    .domain([0, 500]), cpath
                     .append("g")
                     .attr("class", "x-axis axis")
                     .attr("transform", "translate(0," + h + ")")
@@ -158,7 +159,7 @@ var drawChart = function(hierarchy) {
                     .attr("x", 450)
                     .attr("y", -8)
                     .style("text-anchor", "end")
-                    .text("Year/Month"), cpath
+                    .text("Month"), cpath
                     .append("g")
                     .attr("class", "y-axis axis")
                     .call(lefttick)
@@ -167,7 +168,7 @@ var drawChart = function(hierarchy) {
                     .attr("y", 6)
                     .attr("dy", ".91em")
                     .style("text-anchor", "end")
-                    .text("3-Year Price Performance"), cpath
+                    .text("3-Year Growth of $100"), cpath
                     .append("path")
                     .datum(b)
                     .attr("class", "line")
@@ -206,10 +207,10 @@ var drawChart = function(hierarchy) {
                 .svg
                 .axis()
                 .scale(j)
-//                .tickValues(months)
+                .tickValues([0, 12, 24, 36, 48, 60])
 //                .tickFormat(d3.format(".0f"))
-//                .tickPadding(10)
-//                .tickSize(0)
+                .tickPadding(10)
+                .tickSize(0)
                 .orient("bottom"),
                 lefttick = d3
                 .svg
@@ -217,7 +218,7 @@ var drawChart = function(hierarchy) {
                 .scale(k)
                 .tickSize(0)
                 .tickPadding(10)
-                .tickValues([20, 40, 60, 80, 100])
+                .tickValues([100, 200, 300, 400, 500])
                 .orient("left"),
                 n = d3.svg.line().interpolate("basis").x(function(a) {
                     return j(a.date)
