@@ -1,52 +1,52 @@
 symbol,name,sector,country
-1,CKH_Holdings,Conglomerates,HK_Ordinary
-2,CLP_Holdings,Utilities,HK_Ordinary
-3,HK_&_China_Gas,Utilities,HK_Ordinary
-4,Wharf_Holdings,Properties_&_Construction,HK_Ordinary
-5,HSBC_Holdings,Financials,HK_Ordinary
-6,Power_Assets,Utilities,HK_Ordinary
-11,Hang_Seng_Bank,Financials,HK_Ordinary
-12,Henderson_Land,Properties_&_Construction,HK_Ordinary
-16,SHK_Ppt,Properties_&_Construction,HK_Ordinary
-17,New_World_Dev,Properties_&_Construction,HK_Ordinary
-19,Swire_Pacific_A,Conglomerates,HK_Ordinary
-23,Bank_of_E_Asia,Financials,HK_Ordinary
-27,Galaxy_Ent,Consumer_Services,HK_Ordinary
-66,MTR_Corporation,Consumer_Services,HK_Ordinary
-83,Sino_Land,Properties_&_Construction,HK_Ordinary
-101,Hang_Lung_Ppt,Properties_&_Construction,HK_Ordinary
-135,Kunlun_Energy,Energy,Red_Chip
-144,China_Mer_Port,Industrials,Red_Chip
-151,Want_Want_China,Consumer_Goods,Other_HK-listed_Mainland_Company
-267,CITIC,Conglomerates,Red_Chip
-293,Cathay_Pac_Air,Consumer_Services,HK_Ordinary
-386,Sinopec_Corp,Energy,H_Share
-388,HKEx,Financials,HK_Ordinary
-494,Li_&_Fung,Consumer_Goods,HK_Ordinary
-688,China_Overseas,Properties_&_Construction,Red_Chip
-700,Tencent,Information_Technology,Other_HK-listed_Mainland_Company
-762,China_Unicom,Telecommunications,Red_Chip
-823,Link_REIT,Properties_&_Construction,HK_Ordinary
-836,China_Res_Power,Utilities,Red_Chip
-857,PetroChina,Energy,H_Share
-883,CNOOC,Energy,Red_Chip
-902,Huaneng,Utilities,H_Share
-939,CCB,Financials,H_Share
-941,China_Mobile,Telecommunications,Red_Chip
-992,Lenovo_Group,Information_Technology,Red_Chip
-1038,CKI_Holdings,Utilities,HK_Ordinary
-1044,Hengan_Int'l,Consumer_Goods,Other_HK-listed_Mainland_Company
-1088,China_Shenhua,Energy,H_Share
-1109,China_Res_Land,Properties_&_Construction,Red_Chip
-1113,CK_Property,Properties_&_Construction,HK_Ordinary
-1299,AIA,Financials,HK_Ordinary
-1398,ICBC,Financials,H_Share
-1880,Belle_Int'l,Consumer_Goods,Other_HK-listed_Mainland_Company
-1928,Sands_China_Ltd,Consumer_Services,HK_Ordinary
-2018,AAC_Tech,Information_Technology,Other_HK-listed_Mainland_Company
-2318,Ping_An,Financials,H_Share
-2319,Mengniu_Dairy,Consumer_Goods,Red_Chip
-2388,BOC_Hong_Kong,Financials,HK_Ordinary
-2628,China_Life,Financials,H_Share
-3328,Bankcomm,Financials,H_Share
-3988,Bank_of_China,Financials,H_Share
+1,CKH Holdings,Conglomerates,HK Ordinary
+2,CLP Holdings,Utilities,HK Ordinary
+3,HK & China Gas,Utilities,HK Ordinary
+4,Wharf Holdings,Properties & Construction,HK Ordinary
+5,HSBC Holdings,Financials,HK Ordinary
+6,Power Assets,Utilities,HK Ordinary
+11,Hang Seng Bank,Financials,HK Ordinary
+12,Henderson Land,Properties & Construction,HK Ordinary
+16,SHK Ppt,Properties & Construction,HK Ordinary
+17,New World Dev,Properties & Construction,HK Ordinary
+19,Swire Pacific A,Conglomerates,HK Ordinary
+23,Bank of E Asia,Financials,HK Ordinary
+27,Galaxy Ent,Consumer Services,HK Ordinary
+66,MTR Corporation,Consumer Services,HK Ordinary
+83,Sino Land,Properties & Construction,HK Ordinary
+101,Hang Lung Ppt,Properties & Construction,HK Ordinary
+135,Kunlun Energy,Energy,Red Chip
+144,China Mer Port,Industrials,Red Chip
+151,Want Want China,Consumer Goods,Other HK-listed Mainland Company
+267,CITIC,Conglomerates,Red Chip
+293,Cathay Pac Air,Consumer Services,HK Ordinary
+386,Sinopec Corp,Energy,H Share
+388,HKEx,Financials,HK Ordinary
+494,Li & Fung,Consumer Goods,HK Ordinary
+688,China Overseas,Properties & Construction,Red Chip
+700,Tencent,Information Technology,Other HK-listed Mainland Company
+762,China Unicom,Telecommunications,Red Chip
+823,Link REIT,Properties & Construction,HK Ordinary
+836,China Res Power,Utilities,Red Chip
+857,PetroChina,Energy,H Share
+883,CNOOC,Energy,Red Chip
+902,Huaneng,Utilities,H Share
+939,CCB,Financials,H Share
+941,China Mobile,Telecommunications,Red Chip
+992,Lenovo Group,Information Technology,Red Chip
+1038,CKI Holdings,Utilities,HK Ordinary
+1044,Hengan Int'l,Consumer Goods,Other HK-listed Mainland Company
+1088,China Shenhua,Energy,H Share
+1109,China Res Land,Properties & Construction,Red Chip
+1113,CK Property,Properties & Construction,HK Ordinary
+1299,AIA,Financials,HK Ordinary
+1398,ICBC,Financials,H Share
+1880,Belle Int'l,Consumer Goods,Other HK-listed Mainland Company
+1928,Sands China Ltd,Consumer Services,HK Ordinary
+2018,AAC Tech,Information Technology,Other HK-listed Mainland Company
+2318,Ping An,Financials,H Share
+2319,Mengniu Dairy,Consumer Goods,Red Chip
+2388,BOC Hong Kong,Financials,HK Ordinary
+2628,China Life,Financials,H Share
+3328,Bankcomm,Financials,H Share
+3988,Bank of China,Financials,H Share
