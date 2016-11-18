@@ -36,11 +36,11 @@
   <body>
     <p>
     <div id="selectors">
-      <select class="chzn-select" data-placeholder="Choose Symbol ..." style="width: 200px">
+      <select class="chosen-symbol" data-placeholder="Choose Symbol ..." style="width: 200px" multiple="true">
         <option value=""></option>
         <option value="1">0001 CKH Holdings</option>
         <option value="2">0002 CLP Holdings</option>
-        <option value="3">0003 HK &amp; China Gas</option>
+        <option value="3">0003 HK & China Gas</option>
         <option value="4">0004 Wharf Holdings</option>
         <option value="5">0005 HSBC Holdings</option>
         <option value="6">0006 Power Assets</option>
@@ -65,7 +65,7 @@
         <option value="330">0330 Esprit Holdings</option>
         <option value="386">0386 Sinopec Corp</option>
         <option value="388">0388 HKEx</option>
-        <option value="494">0494 Li &amp; Fung</option>
+        <option value="494">0494 Li & Fung</option>
         <option value="551">0551 Yue Yuen Ind</option>
         <option value="688">0688 China Overseas</option>
         <option value="700">0700 Tencent</option>
@@ -99,7 +99,7 @@
         <option value="3328">3328 Bankcomm</option>
         <option value="3988">3988 Bank of China</option>
       </select>
-      <select class="chzn-select" data-placeholder="Choose Period ..." style="width: 200px">
+      <select class="chosen-period" data-placeholder="Choose Period ..." style="width: 200px" multiple="true">
         <option value=""></option>
         <option value="201609">2016-09</option>
         <option value="201608">2016-08</option>
@@ -231,26 +231,53 @@
     <script src="js/utils.js"></script>
     <script src="js/radarChart-prepare.js"></script>
     <script>
-      var currentSymbol = "1";
-      var currentSymbolLabel = "0001 CKH Holdings";
-      var currentPeriod = "201609";
-      var currentPeriodLabel = "2016-09";
+      var currentSymbols = [
+        "1"
+      ];
+      var currentSymbolLabels = [
+        "0001 CKH Holdings"
+      ];
+      var currentPeriods = [
+        "201609"
+      ];
+      var currentPeriodLabels = [
+        "2016-09"
+      ];
     
-      $(".chzn-select").chosen();
+      $(".chosen-symbol").chosen();
+      $(".chosen-period").chosen();
 
-      $(".chzn-select").chosen().change(function(event) {
-        var val = $(this).val();
-        var label = $(this.options[this.selectedIndex]).html();
-        if (val.length >= 6) {
-          currentPeriod = val;
-          currentPeriodLabel = label;
-        } else {
-          currentSymbol = val;
-          currentSymbolLabel = label;
+      $(".chosen-symbol").chosen().change(function(event) {
+        var vals = $(".chosen-symbol").val();
+        var labels = [];
+        for (var i = 0; i < this.options.length; ++i) {
+          if (this.options[i].selected) {
+            labels.push(prettifyHtmlString($(this.options[i]).html()));
+          }
         }
-        drawChart(currentSymbol, currentPeriod);
-        $(".chart-caption").text("Fundamentals of " + currentSymbolLabel + " at " + currentPeriodLabel);
+        currentSymbols = vals;
+        currentSymbolLabels = labels;
+        drawChart(currentSymbols, currentPeriods);
+        $(".chart-caption").text("Fundamentals of " + currentSymbolLabels + " at " + currentPeriodLabels);
       });
+
+      $(".chosen-period").chosen().change(function(event) {
+        var vals = $(".chosen-period").val();
+        var labels = [];
+        for (var i = 0; i < this.options.length; ++i) {
+          if (this.options[i].selected) {
+            labels.push(prettifyHtmlString($(this.options[i]).html()));
+          }
+        }
+        currentPeriods = vals;
+        currentPeriodLabels = labels;
+        drawChart(currentSymbols, currentPeriods);
+        $(".chart-caption").text("Fundamentals of " + currentSymbolLabels + " at " + currentPeriodLabels);
+      });
+
+      // Draw something on load
+      drawChart(currentSymbols, currentPeriods);
+      $(".chart-caption").text("Fundamentals of " + currentSymbolLabels + " at " + currentPeriodLabels);
     </script>
   </body>
 </html>

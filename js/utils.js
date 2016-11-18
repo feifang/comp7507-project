@@ -21,3 +21,8 @@ var loadFundamentalsFile = function(symbol) {
   });
   return deferred;
 };
+
+// A very, very elementary version
+var prettifyHtmlString = function(htmlString) {
+  return htmlString.replace("&amp;", "&");
+};
