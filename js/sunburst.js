@@ -168,7 +168,7 @@ var drawChart = function(hierarchy) {
                     .attr("y", 6)
                     .attr("dy", ".91em")
                     .style("text-anchor", "end")
-                    .text("3-Year Growth of $100"), cpath
+                    .text("5-Year Growth of $100"), cpath
                     .append("path")
                     .datum(b)
                     .attr("class", "line")
