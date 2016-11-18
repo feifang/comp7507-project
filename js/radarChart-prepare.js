@@ -59,7 +59,7 @@ var drawChart = function(symbols, periods) {
       var data = _.map(axes, function(x) {
         return { axis: x, value: Math.min(+fundamentalsMatch[0][x], options.maxValue) };
       });
-      options.backgroundSign = +priceMatch[0].monthReturnSign;
+      options.backgroundSign = +priceMatch[0].yearReturnSign;
       var response = {
         data: data,
         options: options
