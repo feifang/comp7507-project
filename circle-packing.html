@@ -13,6 +13,7 @@
 	position: absolute;
 	left: 50px;
 	top: 100px;
+	display: inline-block;
 }
 
 circle {
@@ -46,10 +47,133 @@ text {
   opacity: 0.5;
 }
 
+/* drop down list for years*/
+
+.dropbtn {
+    background-color: #f9f9f9;
+    color: #2c3e50;
+    padding: 16px;
+    font-size: 32px;
+    border: none;
+    cursor: pointer;
+    letter-spacing:2px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: #2c3e50;
+    padding: 12px 30px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #f9f9f9;
+}
+
+/* play button */
+
+.button-container {
+    display: flex;
+
+    margin: 60px auto;
+
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#play {
+  display: flex;
+  overflow: hidden;
+
+  margin: 10px 0;
+  padding: 10px 15px;
+
+  cursor: pointer;
+  user-select: none;
+  transition: all 60ms ease-in-out;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none !important;
+  text-transform: none;
+  text-transform: capitalize;
+
+  color: #f4f7f7;
+  border: 0 none;
+  border-radius: 4px;
+  background: #79a8a9;
+
+  font: 30px sans-serif;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing:2px;
+
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
+ 
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 160px;
+
+  &:hover {
+    transition: all 60ms ease;
+
+    opacity: .85;
+  }
+  
+  &:active {
+    transition: all 60ms ease;
+    opacity: .75;
+  }
+  
+  &:focus {
+    outline: 1px dotted #959595;
+    outline-offset: -4px;
+  }
+}
+
+
 </style>
 <div id="mycontainer" width="1200" height="1200" style="z-index:1;">
 	<div id="controlpanel">
-			<button name="play" id="play" style="z-index:2;">Play</button>
+		<div class="dropdown">
+  			<button class="dropbtn">2006</button>
+ 			<div class="dropdown-content">
+    			<a href="#">2006</a>
+    			<a href="#">2007</a>
+    			<a href="#">2008</a>
+    			<a href="#">2009</a>
+    			<a href="#">2010</a>
+    			<a href="#">2011</a>
+    			<a href="#">2012</a>
+    			<a href="#">2013</a>
+    			<a href="#">2014</a>
+    			<a href="#">2015</a>
+    			<a href="#">2016</a>
+  			</div>
+		</div>
+		<div id='play'>PLAY</div>
 	</div>
 	<div id="mychart" width="1200" height="1200" style="z-index:1;">
 		<svg width="1200" height="1200"></svg>
@@ -58,6 +182,9 @@ text {
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
+
+var isPlaying = false;
+var loop;
 
 var svg = d3.select("svg"),
     diameter = +svg.attr("width"),
@@ -141,15 +268,27 @@ d3.csv("resources/data/HSI_Hierarchy.csv", function(error, data) {
   	  
 
   // play animation from start
-  $("button").on("click", function() {
-  		var time = 0;
-  		var loop_duration = 500;
-  		var loop = setInterval(function(){
+  $("#play").on("click", function() {
+  		var time;
+  		var loop_duration;
+
+  		if (!isPlaying){
+  			$("#play").html('PAUSE');
+  			time = 0;
+  		    loop_duration = 500;
+  		    loop = setInterval(function(){
   			time ++;
   			if(time<date.length){
   				update(date[time]);
+  				$(".dropbtn").html(date[time]);
   			}
   		}, loop_duration);
+  			isPlaying = true;
+  		}else{
+  			clearInterval(loop);
+  			isPlaying = false;
+  		}
+  		
 	});
 		
   function update(column){
