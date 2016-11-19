@@ -160,17 +160,17 @@ text {
 		<div class="dropdown">
   			<button class="dropbtn">2006</button>
  			<div class="dropdown-content">
-    			<a href="#">2006</a>
-    			<a href="#">2007</a>
-    			<a href="#">2008</a>
-    			<a href="#">2009</a>
-    			<a href="#">2010</a>
-    			<a href="#">2011</a>
-    			<a href="#">2012</a>
-    			<a href="#">2013</a>
-    			<a href="#">2014</a>
-    			<a href="#">2015</a>
-    			<a href="#">2016</a>
+    			<a class="seleted-time" href="#">2006</a>
+    			<a class="seleted-time" href="#">2007</a>
+    			<a class="seleted-time" href="#">2008</a>
+    			<a class="seleted-time" href="#">2009</a>
+    			<a class="seleted-time" href="#">2010</a>
+    			<a class="seleted-time" href="#">2011</a>
+    			<a class="seleted-time" href="#">2012</a>
+    			<a class="seleted-time" href="#">2013</a>
+    			<a class="seleted-time" href="#">2014</a>
+    			<a class="seleted-time" href="#">2015</a>
+    			<a class="seleted-time" href="#">2016</a>
   			</div>
 		</div>
 		<div id='play'>PLAY</div>
@@ -187,7 +187,7 @@ text {
 var isPlaying = false;
 var loop;
 var time = 0;
-var duration = 200;
+var duration = 400;
 var loop_duration = duration + 100;
 
 var svg = d3.select("svg"),
@@ -281,6 +281,21 @@ d3.csv("resources/data/HSI_Hierarchy.csv", function(error, data) {
   		}
   		
 	});
+	
+  $(".seleted-time").on("click", function(){
+  	selected = $(this).text();
+  	$(".dropbtn").html(selected);
+	time = getDate(selected);
+	update(date[time]);
+  });
+  
+  function getDate(year) {
+  	for (var i =0; i<date.length; i++){
+  		if(date[i].substring(0, 4)==year){
+  			return i;
+  		}
+  	}
+}
 	
   function play(start_time){
   	$("#play").html('PAUSE');
