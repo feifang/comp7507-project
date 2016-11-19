@@ -183,8 +183,12 @@ text {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
 
+// global variables for animation
 var isPlaying = false;
 var loop;
+var time = 0;
+var duration = 200;
+var loop_duration = duration + 100;
 
 var svg = d3.select("svg"),
     diameter = +svg.attr("width"),
@@ -237,7 +241,7 @@ d3.csv("resources/data/HSI_Hierarchy.csv", function(error, data) {
 
   // fill: set color by industry
   var circle = node.append("circle")
-      		   .attr("r", function(d) { console.log("id: "+ d.id + " d.r: "+d.r); return d.r; })
+      		   .attr("r", function(d) { return d.r; })
       		   .style("fill", function(d) { return color(d.data.industry); });
 
   // add leaf node label: filter and only apply to leaf nodes
@@ -269,31 +273,45 @@ d3.csv("resources/data/HSI_Hierarchy.csv", function(error, data) {
 
   // play animation from start
   $("#play").on("click", function() {
-  		var time;
-  		var loop_duration;
-
   		if (!isPlaying){
-  			$("#play").html('PAUSE');
-  			time = 0;
-  		    loop_duration = 500;
-  		    loop = setInterval(function(){
+  			play(time);
+  		}else{
+  			time = date.indexOf($(".dropbtn").text());
+  			pause();
+  		}
+  		
+	});
+	
+  function play(start_time){
+  	$("#play").html('PAUSE');
+  	isPlaying = true;
+  	time = start_time;
+  	loop = setInterval(function(){
   			time ++;
   			if(time<date.length){
   				update(date[time]);
   				$(".dropbtn").html(date[time]);
+  			} else if(time==date.length) { // when animation is finished
+  				reset();
+  				clearInterval(loop);
   			}
   		}, loop_duration);
-  			isPlaying = true;
-  		}else{
-  			clearInterval(loop);
-  			isPlaying = false;
-  		}
-  		
-	});
+  }
+  
+  function pause(){
+  	$("#play").html('PLAY');
+  	clearInterval(loop);
+  	isPlaying = false;
+  }
+  
+  function reset(){
+  	$("#play").html('PLAY');
+  	isPlaying = false;
+  	time = 0;
+  }
 		
   function update(column){
   	// update value 
-  	var duration = 500;
 	root
 		.sum(function(d) { return d[column]; })
       	.sort(function(a, b) { return b.value - a.value; });
