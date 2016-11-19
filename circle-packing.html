@@ -47,6 +47,10 @@ text {
   opacity: 0.5;
 }
 
+.legendCells text{
+  font: 24px;
+}
+
 /* drop down list for years*/
 
 .dropbtn {
@@ -180,6 +184,7 @@ text {
 	</div>
 </div>
 <script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.17.0/d3-legend.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
 
@@ -224,8 +229,26 @@ d3.csv("resources/data/HSI_Hierarchy.csv", function(error, data) {
   var root = stratify(data)
       .sum(function(d) { return d[date[0]]; })
       .sort(function(a, b) { return b.value - a.value; });
-      
-  console.log(root);
+  
+  // Add legend
+  var svg = d3.select("svg");
+
+  svg.append("g")
+  	.attr("class", "legendOrdinal")
+  	.attr("transform", "translate(30,900)");
+  	
+  var legendOrdinal = d3.legendColor()
+  	.shape("path", d3.symbol().type(d3.symbolCircle).size(700)())
+  	.shapePadding(12)
+  	.scale(color);
+
+  svg.select(".legendOrdinal")
+  	.call(legendOrdinal);
+  
+  svg.selectAll(".label")
+  	.style("font-size", function(d) {return "24px";})
+  	.style("text-anchor", "right")
+  	.attr("transform", function(d) { if(d=="Utilities") return "translate(75, 10)"; else return d.length > 9 ? d.length > 10? "translate(150, 10)" : "translate(90, 10)" : "translate(80, 10)";});
   
   // pack(root): invoke Pack layout
   // descendants(): Returns the array of descendant nodes, starting with this node, then followed by each child in topological order.

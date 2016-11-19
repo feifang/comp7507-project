@@ -29,3 +29,4 @@ Demo Sources
 2. Circle Packing. http://bl.ocks.org/mbostock/4063530.
 3. d3-hierarchy. https://github.com/d3/d3-hierarchy.
 4. Sunburst Chart. https://gist.github.com/wizicer/f662a0b04425fc0f7489.
+5. d3-legend. https://github.com/susielu/d3-legend.
