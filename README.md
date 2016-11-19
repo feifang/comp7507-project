@@ -1,5 +1,10 @@
 # comp7507-project
 
+Set Up & Run
+
+1. You need to run a local web server rather than using file://.
+2. Go to http://localhost:8080 (or other ports defined by you) and you will see the index page, showing all of our visualizations.
+
 References
 
 1.  Financial Times. http://markets.ft.com/data/equities/tearsheet/financials?s=1:HKG. 
