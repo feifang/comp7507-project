@@ -251,7 +251,7 @@ var drawChart = function(hierarchy) {
         .attr("width", width)
         .attr("height", height)
         .append("svg:g")
-        .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+        .attr("transform", "translate(" + width / 2 + "," + (height/2-100)  + ")");
     sunburst.append("svg:circle").attr("r", rad).style("opacity", 0);
     var t = function(a, b) {
             var c = [],
@@ -279,7 +279,6 @@ var drawChart = function(hierarchy) {
         .size([2 * Math.PI, rad])
         .children(function(a) {
             // Resolve tree
-            console.log(a);
             return _.isArray(a.value) ?
                 (a._proficiency = a.value, d3.entries([a.value[a.value.length - 1]])) :
                 (a._proficiency = u(a.value), isNaN(a.value) ? d3.entries(a.value) : null)
