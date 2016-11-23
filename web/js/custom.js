@@ -14,6 +14,7 @@
   6. GOOGLE MAP
   7. PRELOADER 
   8. WOW SMOOTH ANIMATIN
+  9. GET REPORT
 
   
 **/
@@ -25,7 +26,7 @@
     /*  1.HEADER SLIDER
     /* ----------------------------------------------------------- */
 
-    jQuery('#demo1').skdslider({delay:5000, animationSpeed: 2000,showNextPrev:false,showPlayButton:false,autoSlide:true,animationType:'fading'});
+    jQuery('#demo1').skdslider({delay:5000, animationSpeed: 2000,showNextPrev:false,showPlayButton:false,autoSlide:false,animationType:'fading'});
       
       jQuery('#responsive').change(function(){
         $('#responsive_wrapper').width(jQuery(this).val());
@@ -185,7 +186,13 @@
       }
     );
     wow.init();
- 
+    
+  /* ----------------------------------------------------------- */
+  /*  9. GET REPORT
+  /* ----------------------------------------------------------- */
+  $('.view-report').on('click', function(){
+  	window.open('https://github.com/feifang/comp7507-project/blob/master/Project%20Report.pdf','_blank');
+  });
   
 });
 	
