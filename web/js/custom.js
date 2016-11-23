@@ -15,6 +15,7 @@
   7. PRELOADER 
   8. WOW SMOOTH ANIMATIN
   9. GET REPORT
+  10. THE EXTRA
 
   
 **/
@@ -194,6 +195,16 @@
   	window.open('https://github.com/feifang/comp7507-project/blob/master/Project%20Report.pdf','_blank');
   });
   
+  /* ----------------------------------------------------------- */
+  /*  10. THE EXTRA
+  /* ----------------------------------------------------------- */
+  $('.extra-vis').on('click', function(){
+    if($('.extra-vis').attr('src')==='image/directorsNetwork(company_label).png') {
+    	$('.extra-vis').attr('src', 'image/directorsNetwork.png');
+    } else if ($('.extra-vis').attr('src')==='image/directorsNetwork.png') {
+        $('.extra-vis').attr('src', 'image/directorsNetwork(company_label).png');
+    }    
+  });
 });
 	
  
