@@ -716,9 +716,6 @@ img{border: none;}
   width: 100%;
 }
 .newsletter_right form {
-  background: none repeat scroll 0 0 #FFFFFF;
-  margin: 0;
-  width: 530px;  
 }
 .newsletter_right form input[type="email"] {
   border: medium none;
