@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AppStation : Home</title>
+    <title>Visualization of HK Listed Stocks</title>
 
     <!-- Bootstrap -->
     <link href="web/css/bootstrap.min.css" rel="stylesheet">
@@ -17,8 +17,6 @@
     <link rel="stylesheet" href="web/css/animate.css"> 
     <!-- Main style css -->
     <link rel="stylesheet" href="web/style.css">
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/png" href="web/img/favicon.png"/>
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>     
    
@@ -60,10 +58,8 @@
                   <ul class="nav navbar-nav navbar-right custom_nav mobnav" id="top-menu">
                     <li class="active"><a href="#headerArea">HOME</a></li>
                     <li><a href="#featuresSection">FEATURES </a></li>
-                    <li><a href="#priceList">PRICE LIST</a></li>
-                    <li><a href="#videoSection">Video</a></li>
-                    <li><a href="#testimonila">TESTIMONIAL</a></li>
-                    <li><a href="#clients">CLIENTS</a></li>
+                    <li><a href="#visualization1">VISUALIZATIONS</a></li>
+                    <li><a href="#newsletter">REPORT</a></li>
                     <li><a href="#contact">CONTACT</a></li>
                   </ul>
                 </div><!--/.nav-collapse -->
@@ -77,11 +73,11 @@
               <!--Slider Description example-->
               <div class="slide-desc">
                 <div class="slide_descright">
-                  <h1>Build With Bootstrap V3.1.1</h1>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make</p>
+                  <h1>Visualization of HK Listed Stocks</h1>
+                  <p></p>
                   <div class="header_btnarea">
-                    <a href="#featuresSection" class="learnmore_btn">Learn More</a>
-                    <a href="#" class="download_btn">Download</a>
+                    <a href="#firstTop" class="learnmore_btn">Visualizations</a>
+                    <a href="https://github.com/feifang/comp7507-project/blob/master/Project%20Report.pdf" class="download_btn">View Report</a>
                   </div>
                 </div>
               </div>
@@ -131,9 +127,10 @@
       </div>
     </div>  
    <!-- START VISUALIZATION AREA -->
+   
    <!-- START FIRST VISUALIZATION -->
     <div class="features_productarea">
-      <div class="direction_icon">
+      <div id = "firstVis" class="direction_icon">
         <a id="firstTop" class="dirc_up" href="#">
           <i class="fa fa-chevron-up"></i>
         </a>
@@ -141,9 +138,10 @@
           <i class="fa fa-chevron-down"></i>
         </a>
       </div>
+      <section id="visualization1">
       <div class="container">
         <div class="row">
-          <div class="col-lg-10 col-md-10">
+          <div class="col-lg-10 col-md-10" id="the-past-vis">
           	<iframe sandbox="allow-popups allow-scripts allow-forms allow-same-origin" src="circle-packing.html" marginwidth="0" marginheight="0" style="height:1100px; width: 1400px; border : none; transform: scale(0.65); 
    transform-origin: 0% 0%; " scrolling="no"></iframe>
           </div>
@@ -154,6 +152,7 @@
         </div> 
       </div>
     </div>
+    </section>
     <!-- START SECOND VISUALIZATION -->
     <div class="features_productarea">
       <div class="direction_icon">
@@ -164,19 +163,21 @@
           <i class="fa fa-chevron-down"></i>
         </a>
       </div>
+      <section id="visualization2">
       <div class="container">
       	<div class="row">
           <div class="col-lg-2 col-md-2">
           	<h1>Now</h1>
           	<p>Oftentimes, industries as a whole may significantly outperform or underperform the index as a whole.</p>
           </div>
-          <div class="col-lg-10 col-md-10">
+          <div class="col-lg-10 col-md-10" id="now-vis">
             <iframe sandbox="allow-popups allow-scripts allow-forms allow-same-origin" src="sunburst-chart.html" marginwidth="0" marginheight="0" style="height:950px; width: 1350px; border : none; transform: scale(0.75); 
    transform-origin: -15% -5%;" scrolling="no"></iframe>
           </div>
         </div>
       </div>
     </div>
+    </section>
     <!-- START THIRD VISUALIZATION -->
     <div class="features_productarea">
       <div class="direction_icon">
@@ -187,6 +188,7 @@
           <i class="fa fa-chevron-down"></i>
         </a>
       </div>
+      <section id="visualization3">
       <div class="container">
         <div class="row">
           <div class="col-lg-9 col-md-9">
@@ -200,6 +202,7 @@
         </div> 
       </div>
     </div>
+    </section>
 
   <!-- START VIDEO SECTION -->
   <section id="videoSection">
@@ -210,7 +213,7 @@
             <h1>The Extras</h1>
             <p>Unearth the relationship between stocks in another aspect - the interpersonal relationship between directors</p>
             <div class="featured_video">
-              <img class="extra-vis" src="image/directorsNetwork.png" alt="Hidden Network of Directors" style="transform: scale(0.85)">
+              <img class="extra-vis" src="image/directorsNetwork.png" alt="Hidden Network of Directors" style="transform: scale(0.80); margin-top: -45px;">
             </div>
           </div>
         </div>

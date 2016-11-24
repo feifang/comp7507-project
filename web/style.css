@@ -266,7 +266,8 @@ img{border: none;}
   margin-top: 15%;
 }
 .slide_descright h1 { 
-  font-size: 35px;
+  font-weight: 700;
+  color: #ffe04e;
   text-transform: uppercase;
 }
 .slide_descright p{
@@ -458,6 +459,13 @@ img{border: none;}
   outline: none;
   text-decoration: none;
 }
+#the-past-vis {
+  height: 720px;
+}
+#now-vis {
+  height: 600px;
+}
+
 .secondfeatures_prodsarea{
   float: left;
   display: inline;
@@ -578,99 +586,9 @@ img{border: none;}
   display: inline;
   float: left;
   height: 700px;
-  margin-top: 30px;
+  margin-top: 0px;
   padding: 0 6%;
   width: 100%;
-}
-
-/*--------------------*/
-/* TESTIMONIAL */
-/*--------------------*/
-
-#testimonila {
-  background-color: #FFFFFF;
-  display: inline;
-  float: left;
-  padding: 100px 0 150px;
-  width: 100%;
-}
-.testimonila_area{
-  float: left;
-  display: inline;
-  width: 100%;
-  text-align: center;
-}
-.testimonila_area > p {
-  color: #606060; 
-  font-size: 20px;
-  margin-top: 25px;
-}
-.testimonial_slider {
-  display: inline;
-  float: left;
-  margin-top: 70px;
-  width: 100%;
-}
-.slider_content{
-  float: left;
-  display: inline;
-  width: 100%;
-  text-align: center;
-}
-.slider_content a {
-  background: #ccc;
-  padding: 5px;
-  display: inline-block;
-  border-radius: 100%;
-  margin-bottom: 20px;
-}
-.slider_content a > img {
-  border-radius: 100%;
-}
-.slider_content p {
-  color: #909090;
-  font-size: 20px;
-  margin-top: 20px;
-}
-.slider_content p > i {
-  color: #FFD200;
-  display: inline-block;
-  font-size: 22px;
-  margin: 0 4px;
-}
-.slider_content span {
-  color: #CCCCCC;
-  display: block;  
-  font-size: 20px;
-}
-.carousel-indicators {
-  bottom: 10px;
-  left: 50%;
-  list-style: none outside none;
-  margin-left: -30%;
-  padding-left: 0;
-  position: absolute;
-  text-align: center;
-  top: 110%;
-  width: 60%;
-  z-index: 15;
-}
-.carousel-indicators li {
-  background-color: rgba(0, 0, 0, 0);
-  border: 1px solid #FFD200;
-  border-radius: 10px;
-  cursor: pointer;
-  display: inline-block;
-  height: 10px;
-  margin: 1px;
-  text-indent: -999px;
-  width: 10px;
-}
-.carousel-indicators .active {
-  background-color: #FFD200;
-  height: 12px;
-  margin: 0;
-  width: 12px;
 }
 
 /*--------------------*/
