@@ -1,34 +1,38 @@
-# comp7507-project
+# VISUALIZATION OF HK LISTED STOCKS
 
-Set Up & Run
+**Project Report:** https://github.com/feifang/comp7507-project/blob/master/Project%20Report.pdf
 
-1. You need to run a local web server rather than using file://.
-2. Go to http://localhost:8080 (or other ports defined by you) and you will see the index page, showing all of our visualizations.
+### Live Demo
 
-References
+[https://feifang.github.io/comp7507-project/](https://feifang.github.io/comp7507-project/)
 
-1.  Financial Times. http://markets.ft.com/data/equities/tearsheet/financials?s=1:HKG. 
-2.  CNBC. http://data.cnbc.com/quotes/1-HK/tab/6.2.
-3.  Visualizing the stock market structure. http://scikit-learn.org/stable/auto_examples/applications/plot_stock_market.html.
-4.  Sunburst for your skill map. http://bl.ocks.org/wizicer/f662a0b04425fc0f7489.
-5.  The Wealth & Health of Nations. https://bost.ocks.org/mike/nations/.
-6.  A different look for the D3 radar chart. http://www.visualcinnamon.com/2015/10/different-look-d3-radar-chart.html.
-7.  George Soros. The Alchemy of Finance, 2nd Edition (2003). Wiley Publishing.
-8.  StockBubbler: A Tool for Stock Market Bubble Visualization. https://www.icat.vt.edu/image/project/stockbubbler-tool-stock-market-bubble-visualization.
-9.  Circle Packing. http://bl.ocks.org/mbostock/4063530.
+![demo](demo.jpg)
+
+
+### References
+
+1. Financial Times. http://markets.ft.com/data/equities/tearsheet/financials?s=1:HKG. 
+2. CNBC. http://data.cnbc.com/quotes/1-HK/tab/6.2.
+3. Visualizing the stock market structure. http://scikit-learn.org/stable/auto_examples/applications/plot_stock_market.html.
+4. Sunburst for your skill map. http://bl.ocks.org/wizicer/f662a0b04425fc0f7489.
+5. The Wealth & Health of Nations. https://bost.ocks.org/mike/nations/.
+6. A different look for the D3 radar chart. http://www.visualcinnamon.com/2015/10/different-look-d3-radar-chart.html.
+7. George Soros. The Alchemy of Finance, 2nd Edition (2003). Wiley Publishing.
+8. StockBubbler: A Tool for Stock Market Bubble Visualization. https://www.icat.vt.edu/image/project/stockbubbler-tool-stock-market-bubble-visualization.
+9. Circle Packing. http://bl.ocks.org/mbostock/4063530.
 10. Sun Hung Kai executive arrested in bribery probe (Retrieved on 8th October, 2016). http://www.scmp.com/article/995996/sun-hung-kai-executive-arrested-bribery-probe.
 11. Hong Kong jewellery tycoon Cheng Yu-tung dies, aged 91 (Retrieved on 8th October, 2016). http://www.scmp.com/business/article/2024046/hong-kong-jewellery-tycoon-cheng-yu-tung-dies-aged-91.
 12. Heatmap. http://bl.ocks.org/ianyfchang/8119685.
 13. Matrix Diagrams. http://mbostock.github.io/protovis/ex/matrix.html.
 14. Les Misérables Co-occurrence. https://bost.ocks.org/mike/miserables/.
 15. Scatterplot Matrix Brushing. https://bl.ocks.org/mbostock/4063663.
-17. 16. AAStocks. http://www.aastocks.com/.
-18. Sina Finance. http://finance.sina.com.cn/.
-19. Webb-Site. http://webb-site.com/.
-20. Google Trends. https://www.google.com/trends/.
-21. GitHub Pages. https://pages.github.com/.
+16. AAStocks. http://www.aastocks.com/.
+17. Sina Finance. http://finance.sina.com.cn/.
+18. Webb-Site. http://webb-site.com/.
+19. Google Trends. https://www.google.com/trends/.
+20. GitHub Pages. https://pages.github.com/.
 
-Demo Sources
+### D3 Resources
 
 1. Radar Chart. https://gist.github.com/nbremer/21746a9668ffdf6d8242#file-radarchart-js.
 2. Circle Packing. http://bl.ocks.org/mbostock/4063530.
